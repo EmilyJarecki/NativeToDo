@@ -23,7 +23,6 @@ export default function App() {
       {/* This is just the header */}
         <Text style={styles.heading}>TODO LIST</Text>
 
-        
       <ScrollView style={styles.scrollView}>
         {
         tasks.map((task, index) => {
@@ -47,9 +46,9 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 40,
     fontWeight: '600',
-    marginTop: 30,
+    marginTop: 50,
     marginBottom: 10,
     marginLeft: 20,
   },

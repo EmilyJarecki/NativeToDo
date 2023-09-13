@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react';
 import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, } from "react-native";
-import { MaterialIcons } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default TaskInputField = (props) => {
     const [task, setTask] = useState();
@@ -15,20 +15,21 @@ export default TaskInputField = (props) => {
 
         // KeyboardAvoidingView makes sure that the input field is above the text so that you can see it while you're typing in it
         // acts like sticky
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
 
         // this is what allows it
+        // why like this? idk
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.container}
       >
-        <TextInput 
-            style={styles.inputField} 
-            value={task} 
-            onChangeText={text => setTask(text)} 
-            placeholder={'Write a task'} 
+        <TextInput
+            style={styles.inputField}
+            value={task}
+            onChangeText={text => setTask(text)}
+            placeholder={'Write a task'}
             placeholderTextColor={'#fff'}
         />
-        <TouchableOpacity 
+        <TouchableOpacity
             onPress={() => handleAddTask(task)}
         >
           <View style={styles.button}>
